@@ -49,10 +49,10 @@
       <a href="<?php echo base_url(); ?>" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini">
-          <b>BSE</b>U</span>
+          <b>A</b>DMIN</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg">
-          <b>BSEU</b>ADMINISTRATION</span>
+          <b>A</b>DMINISTRATION</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top" role="navigation">
@@ -150,6 +150,12 @@
             if($role == ROLE_ADMIN)
             {
             ?>
+			<li class="treeview">
+              <a href="<?php echo base_url(); ?>uploadtask">
+                <i class="fa fa-upload"></i>
+                <span>Upload Task</span>
+              </a>
+            </li>
               <li class="treeview">
                 <a href="<?php echo base_url(); ?>userListing">
                   <i class="fa fa-users"></i>
