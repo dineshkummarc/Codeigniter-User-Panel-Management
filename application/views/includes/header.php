@@ -52,7 +52,7 @@
           <b>BSE</b>U</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg">
-          <b>BSEU</b>YONETIM</span>
+          <b>BSEU</b>ADMINISTRATION</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top" role="navigation">
@@ -67,7 +67,7 @@
                 <i class="fa fa-history"></i>
               </a>
               <ul class="dropdown-menu">
-                <li class="header"> Son Giriş :
+                <li class="header"> Last Login :
                   <i class="fa fa-clock-o"></i>
                   <?= empty($last_login) ? "İlk Giriş" : $last_login; ?>
                 </li>
@@ -96,11 +96,11 @@
                 <li class="user-footer">
                   <div class="pull-left">
                     <a href="<?php echo base_url(); ?>userEdit" class="btn btn-default btn-flat">
-                      <i class="fa fa-key"></i> Hesap Ayarları </a>
+                      <i class="fa fa-key"></i> Account settings </a>
                   </div>
                   <div class="pull-right">
                     <a href="<?php echo base_url(); ?>logout" class="btn btn-default btn-flat">
-                      <i class="fa fa-sign-out"></i> Çıkış Yap</a>
+                      <i class="fa fa-sign-out"></i> Log out</a>
                   </div>
                 </li>
               </ul>
@@ -120,7 +120,7 @@
           <li class="treeview">
             <a href="<?php echo base_url(); ?>dashboard">
               <i class="fa fa-dashboard"></i>
-              <span>Anasayfa</span>
+              <span>Dashboard</span>
               </i>
             </a>
           </li>
@@ -132,13 +132,13 @@
             <li class="treeview">
               <a href="<?php echo base_url(); ?>tasks">
                 <i class="fa fa-tasks"></i>
-                <span>Görevler</span>
+                <span>Tasks</span>
               </a>
             </li>
             <li class="treeview">
               <a href="<?php echo base_url(); ?>addNewTask">
                 <i class="fa fa-plus-circle"></i>
-                <span>Görev Ekle</span>
+                <span>Add Task</span>
               </a>
             </li>
             <?php
@@ -149,31 +149,31 @@
               <li class="treeview">
                 <a href="<?php echo base_url(); ?>userListing">
                   <i class="fa fa-users"></i>
-                  <span>Kullanıcılar</span>
+                  <span>Users</span>
                 </a>
               </li>
               <li class="treeview">
                 <a href="<?php echo base_url(); ?>addNew">
                   <i class="fa fa-plus-circle"></i>
-                  <span>Kullanıcı Ekle</span>
+                  <span>Add User</span>
                 </a>
               </li>
               <li class="treeview">
                 <a href="<?php echo base_url(); ?>log-history">
                   <i class="fa fa-archive"></i>
-                  <span>Log Kayıtları</span>
+                  <span>Log Records</span>
                 </a>
               </li>
               <li class="treeview">
                 <a href="<?php echo base_url(); ?>log-history-upload">
                   <i class="fa fa-upload"></i>
-                  <span>Yedek Yükle</span>
+                  <span>Load Backup</span>
                 </a>
               </li>
               <li class="treeview">
                 <a href="<?php echo base_url(); ?>log-history-backup">
                   <i class="fa fa-archive"></i>
-                  <span>Log Kayıtları Yedek</span>
+                  <span>Log Records Backup</span>
                 </a>
               </li>
               <?php
@@ -184,7 +184,7 @@
                 <li class="treeview">
                   <a href="<?php echo base_url(); ?>etasks">
                     <i class="fa fa-tasks"></i>
-                    <span>Görevler</span>
+                    <span>Tasks</span>
                   </a>
                   <?php
             }
