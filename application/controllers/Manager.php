@@ -46,7 +46,7 @@ class Manager extends BaseController
             $processFunction = 'Manager/tasks';
             $this->logrecord($process,$processFunction);
 
-            $this->global['pageTitle'] = 'BSEU : Tüm Görevler';
+            $this->global['pageTitle'] = 'BSEU : All Tasks';
             
             $this->loadViews("tasks", $this->global, $data, NULL);
     }
@@ -58,7 +58,7 @@ class Manager extends BaseController
     {
             $data['tasks_prioritys'] = $this->user_model->getTasksPrioritys();
 
-            $this->global['pageTitle'] = 'BSEU : Görev Ekle';
+            $this->global['pageTitle'] = 'BSEU : Add Task';
 
             $this->loadViews("addNewTask", $this->global, $data, NULL);
     }
@@ -70,8 +70,8 @@ class Manager extends BaseController
     {
             $this->load->library('form_validation');
             
-            $this->form_validation->set_rules('fname','Görev Başlığı','required');
-            $this->form_validation->set_rules('priority','Öncelik','required');
+            $this->form_validation->set_rules('fname','Task Title','required');
+            $this->form_validation->set_rules('priority','Priority','required');
             
             if($this->form_validation->run() == FALSE)
             {
@@ -92,15 +92,15 @@ class Manager extends BaseController
                 
                 if($result > 0)
                 {
-                    $process = 'Görev Ekleme';
+                    $process = 'Adding a Task';
                     $processFunction = 'Manager/addNewTasks';
                     $this->logrecord($process,$processFunction);
 
-                    $this->session->set_flashdata('success', 'Görev başarıyla oluşturuldu');
+                    $this->session->set_flashdata('success', 'The task has been successfully created');
                 }
                 else
                 {
-                    $this->session->set_flashdata('error', 'Görev oluşturma başarısız');
+                    $this->session->set_flashdata('error', 'Task creation failed');
                 }
                 
                 redirect('addNewTask');
@@ -121,7 +121,7 @@ class Manager extends BaseController
             $data['tasks_prioritys'] = $this->user_model->getTasksPrioritys();
             $data['tasks_situations'] = $this->user_model->getTasksSituations();
             
-            $this->global['pageTitle'] = 'BSEU : Görev Düzenle';
+            $this->global['pageTitle'] = 'BSEU : Edit Task';
             
             $this->loadViews("editOldTask", $this->global, $data, NULL);
     }
@@ -133,8 +133,8 @@ class Manager extends BaseController
     {            
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('fname','Görev Başlığı','required');
-        $this->form_validation->set_rules('priority','Öncelik','required');
+        $this->form_validation->set_rules('fname','Task Title','required');
+        $this->form_validation->set_rules('priority','Priority','required');
         
         $taskId = $this->input->post('taskId');
 
@@ -158,14 +158,14 @@ class Manager extends BaseController
             
             if($result > 0)
             {
-                $process = 'Görev Düzenleme';
+                $process = 'Task Editing';
                 $processFunction = 'Manager/editTask';
                 $this->logrecord($process,$processFunction);
-                $this->session->set_flashdata('success', 'Görev düzenleme başarılı');
+                $this->session->set_flashdata('success', 'Task editing successful');
             }
             else
             {
-                $this->session->set_flashdata('error', 'Görev düzenleme başarısız');
+                $this->session->set_flashdata('error', 'Task editing failed');
             }
             redirect('tasks');
 
@@ -185,15 +185,15 @@ class Manager extends BaseController
             $result = $this->user_model->deleteTask($taskId);
             
             if ($result == TRUE) {
-                 $process = 'Görev Silme';
+                 $process = 'Deleting a Task';
                  $processFunction = 'Manager/deleteTask';
                  $this->logrecord($process,$processFunction);
 
-                 $this->session->set_flashdata('success', 'Görev silme başarılı');
+                 $this->session->set_flashdata('success', 'Task deletion successful');
                 }
             else
             {
-                $this->session->set_flashdata('error', 'Görev silme başarısız');
+                $this->session->set_flashdata('error', 'Task deletion failed');
             }
             redirect('tasks');
     }
