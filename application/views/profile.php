@@ -33,7 +33,7 @@ $role = $userInfo->role;
 
                         <ul class="list-group list-group-unbordered">
                             <li class="list-group-item">
-                                <b>Email</b> <a class="pull-right"><?= $email ?></a>
+                                <b>Email Address</b> <a class="pull-right"><?= $email ?></a>
                             </li>
                             <li class="list-group-item">
                                 <b>Mobile</b> <a class="pull-right"><?= $mobile ?></a>
