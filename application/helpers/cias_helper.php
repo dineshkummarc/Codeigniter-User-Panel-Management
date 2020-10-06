@@ -73,7 +73,7 @@ if(!function_exists('getBrowserAgent'))
         }
         else
         {
-            $agent = 'Tanımlanamadı';
+            $agent = 'Unidentified';
         }
 
         return $agent;
