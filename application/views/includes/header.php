@@ -98,6 +98,10 @@
                     <a href="<?php echo base_url(); ?>userEdit" class="btn btn-default btn-flat">
                       <i class="fa fa-key"></i> Account settings </a>
                   </div>
+				  <div class="pull-left">
+                    <a href="<?php echo base_url(); ?>profile" class="btn btn-default btn-flat">
+                      <i class="fa fa-key"></i> Profile </a>
+                  </div>
                   <div class="pull-right">
                     <a href="<?php echo base_url(); ?>logout" class="btn btn-default btn-flat">
                       <i class="fa fa-sign-out"></i> Log out</a>
