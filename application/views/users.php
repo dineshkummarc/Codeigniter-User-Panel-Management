@@ -2,8 +2,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            <i class="fa fa-users"></i> Kullanıcı Yönetimi
-            <small>Ekle, Düzenle, Sil</small>
+            <i class="fa fa-users"></i> User Management
+            <small>Add, Edit, Delete</small>
         </h1>
     </section>
     <section class="content">
@@ -11,7 +11,7 @@
             <div class="col-xs-12 text-right">
                 <div class="form-group">
                     <a class="btn btn-primary" href="<?php echo base_url(); ?>addNew">
-                        <i class="fa fa-plus"></i> Kullanıcı Ekle</a>
+                        <i class="fa fa-plus"></i> Add User</a>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Kullanıcı Listesi</h3>
+                        <h3 class="box-title">User List</h3>
                                     </div>
                       <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
@@ -49,11 +49,11 @@
                   <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Ad</th>
+                                <th>Name</th>
                                 <th>Email</th>
-                                <th>Telefon Numarası</th>
-                                <th>Yetki</th>
-                                <th>İşlemler</th>
+                                <th>Phone Number</th>
+                                <th>Authority</th>
+                                <th>Transactions</th>
                             </tr>
                   </thead>
                   <tbody>
