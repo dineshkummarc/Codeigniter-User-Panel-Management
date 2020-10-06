@@ -15,7 +15,7 @@
             <h3>
               <?php if(isset($tasksCount)) { echo $tasksCount; } else { echo '0'; } ?>
             </h3>
-            <p>Tasks</p>
+            <p>Total Tasks</p>
           </div>
           <div class="icon">
             <i class="fa fa-tasks"></i>
@@ -70,7 +70,7 @@
             <h3>
               <?php if(isset($usersCount)) { echo $usersCount; } else { echo '0'; } ?>
             </h3>
-            <p>User</p>
+            <p>Total User</p>
           </div>
           <div class="icon">
             <i class="ion ion-person"></i>
@@ -88,7 +88,7 @@
             <h3>
               <?php if(isset($logsCount)) { echo $logsCount; } else { echo '0'; } ?>
             </h3>
-            <p>Log</p>
+            <p>Log Details</p>
           </div>
           <div class="icon">
             <i class="fa fa-archive"></i>
