@@ -2,8 +2,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            <i class="fa fa-users"></i> Log Geçmişi
-            <small>Kullanıcıların Log Geçmişi</small>
+            <i class="fa fa-users"></i> Log History
+            <small>Users' Log History</small>
         </h1>
     </section>
     <section class="content">
@@ -45,16 +45,16 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Kullanıcı Adı</th>
-                                            <th>İşlem</th>
-                                            <th>İşlem Fonksiyon</th>
-                                            <th>Kullanıcı Rol ID</th>
-                                            <th>Kullanıcı Rol</th>
-                                            <th>Kullanıcı IP</th>
-                                            <th>Tarayıcı</th>
-                                            <th>Tarayıcı Tüm Bilgiler</th>
+                                            <th>User name</th>
+                                            <th>Operation</th>
+                                            <th>Operation Function</th>
+                                            <th>User Role ID</th>
+                                            <th>User Role</th>
+                                            <th>User IP</th>
+                                            <th>Scanner</th>
+                                            <th>Browser All Information</th>
                                             <th>Platform</th>
-                                            <th>Tarih ve Zaman</th>
+                                            <th>Date and Time</th>
                                         </tr>
                                     </thead>
                                     <tbody>
