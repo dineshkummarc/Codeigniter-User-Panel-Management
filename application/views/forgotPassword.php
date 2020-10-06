@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BSEU | Management panel Giriş</title>
+    <title>BSEU | Management panel Login</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <link href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"
-    />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url(); ?>assets/dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,8 +21,7 @@
     <div class="login-box">
         <div class="login-logo">
             <a href="#">
-                <b>BSEU</b>
-                <br>Management panel</a>
+                <b>BSEU</b><br>Management panel</a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
@@ -97,7 +95,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-xs-4">
-                            <input type="submit" class="btn btn-primary btn-block btn-flat" value="Gönder" />
+                            <input type="submit" class="btn btn-primary btn-block btn-flat" value="Send" />
                         </div>
                         <!-- /.col -->
                     </div>
