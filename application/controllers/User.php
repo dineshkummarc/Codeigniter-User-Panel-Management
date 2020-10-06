@@ -180,7 +180,7 @@ class User extends BaseController
             
             if(empty($resultPas))
             {
-                $this->session->set_flashdata('nomatch', 'Eski Passwordniz doğru değil');
+                $this->session->set_flashdata('nomatch', 'Your old Password is not correct');
                 redirect('loadChangePass');
             }
             else
