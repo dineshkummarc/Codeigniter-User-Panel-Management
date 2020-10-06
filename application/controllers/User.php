@@ -264,6 +264,59 @@ class User extends BaseController
             
             $this->loadViews("etasks", $this->global, $data, NULL);
     }
+	
+	// added by dinesh
+	/**
+     * This function is used to show users profile
+     */
+    function profile($active = "details")
+    {
+        $data["userInfo"] = $this->user_model->getUserInfoWithRole($this->vendorId);
+        $data["active"] = $active;
+        
+        $this->global['pageTitle'] = $active == "details" ? 'CodeInsect : My Profile' : 'CodeInsect : Change Password';
+        $this->loadViews("profile", $this->global, $data, NULL);
+    }
+
+    /**
+     * This function is used to update the user details
+     * @param text $active : This is flag to set the active tab
+     */
+    function profileUpdate($active = "details")
+    {
+        $this->load->library('form_validation');
+            
+        $this->form_validation->set_rules('fname','Full Name','trim|required|max_length[128]');
+        $this->form_validation->set_rules('mobile','Mobile Number','required|min_length[10]');
+        $this->form_validation->set_rules('email','Email','trim|required|valid_email|max_length[128]|callback_emailExists');        
+        
+        if($this->form_validation->run() == FALSE)
+        {
+            $this->profile($active);
+        }
+        else
+        {
+            $name = ucwords(strtolower($this->security->xss_clean($this->input->post('fname'))));
+            $mobile = $this->security->xss_clean($this->input->post('mobile'));
+            $email = strtolower($this->security->xss_clean($this->input->post('email')));
+            
+            $userInfo = array('name'=>$name, 'email'=>$email, 'mobile'=>$mobile, 'updatedBy'=>$this->vendorId, 'updatedDtm'=>date('Y-m-d H:i:s'));
+            
+            $result = $this->user_model->editUser($userInfo, $this->vendorId);
+            
+            if($result == true)
+            {
+                $this->session->set_userdata('name', $name);
+                $this->session->set_flashdata('success', 'Profile updated successfully');
+            }
+            else
+            {
+                $this->session->set_flashdata('error', 'Profile updation failed');
+            }
+
+            redirect('profile/'.$active);
+        }
+    }
 
 
 }
