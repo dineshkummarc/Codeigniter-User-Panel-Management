@@ -2,15 +2,15 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      <i class="fa fa-users"></i> Tüm Görevler
-      <small>Panelimizdeki Tüm Görevler</small>
+      <i class="fa fa-users"></i> All Tasks
+      <small>All Tasks in Our Panel</small>
     </h1>
   </section>
   <section class="content">
     <div class="col-xs-12">
       <div class="text-right">
         <a class="btn btn-primary" href="<?php echo base_url(); ?>addNewTask">
-          <i class="fa fa-plus"></i> Görev Ekle</a>
+          <i class="fa fa-plus"></i> Add Task</a>
       </div>
       <div class="box">
         <div class="box-header">
@@ -45,16 +45,16 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Görev Başlığı</th>
-                    <th>Açıklama</th>
-                    <th>Durumu</th>
-                    <th>Öncelik</th>
-                    <th>Oluşturan Kullanıcı</th>
-                    <th>Oluşturan Kullanıcı Yetki</th>
-                    <th>Oluşturulma Tarihi</th>
-                    <th>Bitiş Tarihi</th>
-                    <th>İşlemler</th>
-                    <th>Görev Bitir</th>
+                    <th>Task Title</th>
+                    <th>Explanation</th>
+                    <th>Condition</th>
+                    <th>Priority</th>
+                    <th>Creator User</th>
+                    <th>Creator User Authorization</th>
+                    <th>Creation Date</th>
+                    <th>End Date</th>
+                    <th>Transactions</th>
+                    <th>Finish Task</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -110,7 +110,7 @@
                         <?php echo $record->endDtm ?>
                       </td>
                       <td class="text-center">
-                        <a class="btn btn-sm btn-info" href="<?php echo base_url().'editOldTask/'.$record->id; ?>" title="Düzenle">
+                        <a class="btn btn-sm btn-info" href="<?php echo base_url().'editOldTask/'.$record->id; ?>" title="Edit">
                           <i class="fa fa-pencil"></i>
                         </a>
                         <a class="btn btn-sm btn-danger deleteUser" href="<?php echo base_url().'deleteTask/'.$record->id; ?>" data-userid="<?php echo $record->id; ?>"
@@ -119,7 +119,7 @@
                         </a>
                       </td>
                       <td class="text-center">
-                        <a class="btn btn-sm btn-primary" href="<?= base_url().'endTask/'.$record->id; ?>" title="Görevi Bitir">
+                        <a class="btn btn-sm btn-primary" href="<?= base_url().'endTask/'.$record->id; ?>" title="Finish Mission">
                           <i class="fa fa-check-circle"></i>
                         </a>
                       </td>
