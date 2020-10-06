@@ -128,7 +128,7 @@ class Login extends BaseController
             }
             else
             {
-                $this->session->set_flashdata('error', 'Email adresi veya Password yanlış');
+                $this->session->set_flashdata('error', 'Email or password mismatch');
                 
                 redirect('/login');
             }
@@ -192,7 +192,7 @@ class Login extends BaseController
                     if(!empty($userInfo)){
                         $data1["name"] = $userInfo[0]->name;
                         $data1["email"] = $userInfo[0]->email;
-                        $data1["message"] = "Passwordnizi Sıfırlayın";
+                        $data1["message"] = "Reset Your Password";
                     }
 
                     $sendStatus = resetPasswordEmail($data1);
@@ -203,22 +203,22 @@ class Login extends BaseController
 
                     if($sendStatus){
                         $status = "send";
-                        setFlashData($status, "Password Reset linkiniz başarıyla gönderildi, mailinizi kontrol ediniz.");
+                        setFlashData($status, "Reset password link sent successfully, please check mails.");
                     } else {
                         $status = "notsend";
-                        setFlashData($status, "Email gönderme işlemi başarısız, tekrar deneyin.");
+                        setFlashData($status, "Email has been failed, try again.");
                     }
                 }
                 else
                 {
                     $status = 'unable';
-                    setFlashData($status, "Bilgilerinizi gönderirken bir hata oluştu, tekrar deneyin.");
+                    setFlashData($status, "It seems an error while sending your details, try again.");
                 }
             }
             else
             {
                 $status = 'invalid';
-                setFlashData($status, "Email adresiniz sistemde kayıtlı değil.");
+                setFlashData($status, "This email is not registered with us.");
             }
             redirect('/forgotPassword');
         }
@@ -286,12 +286,12 @@ class Login extends BaseController
                 $this->logrecord($process,$processFunction);
 
                 $status = 'success';
-                $message = 'Password başarıyla değiştirildi';
+                $message = 'Password reset successfully';
             }
             else
             {
                 $status = 'error';
-                $message = 'Password değiştirilemedi';
+                $message = 'Password reset failed';
             }
             
             setFlashData($status, $message);
