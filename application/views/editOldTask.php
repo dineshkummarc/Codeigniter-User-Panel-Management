@@ -6,7 +6,6 @@ $comment = '';
 $priorityId = '';
 $statusId = '';
 
-
 if(!empty($taskInfo))
 {
     foreach ($taskInfo as $uf)
@@ -18,16 +17,13 @@ if(!empty($taskInfo))
         $statusId = $uf->statusId;
     }
 }
-
-
 ?>
 
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                <i class="fa fa-users"></i> Görev Yönetimi
-                <small>Görev Ekle / Düzenle</small>
+                <i class="fa fa-users"></i> Task Management<small>Add / Edit Task</small>
             </h1>
         </section>
         <section class="content">
@@ -37,7 +33,7 @@ if(!empty($taskInfo))
                     <!-- general form elements -->
                     <div class="box box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">Görev bilgilerini giriniz</h3>
+                            <h3 class="box-title">Enter job information</h3>
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
@@ -47,7 +43,7 @@ if(!empty($taskInfo))
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="fname">Görev Başlığı</label>
+                                            <label for="fname">Task Title</label>
                                             <input type="hidden" name="taskId" id="taskId" value="<?php echo $id; ?>">
                                             <input type="text" class="form-control required" value="<?php echo $title; ?>" id="fname" name="fname">
                                         </div>
@@ -55,9 +51,9 @@ if(!empty($taskInfo))
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="role">Öncelik</label>
+                                            <label for="role">Priority</label>
                                             <select class="form-control required" id="priority" name="priority">
-                                                <option value="0">Öncelik seçiniz</option>
+                                                <option value="0">Select priority</option>
                                                 <?php
                                             if(!empty($tasks_prioritys))
                                             {
@@ -78,7 +74,7 @@ if(!empty($taskInfo))
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="comment">Görev Açıklama</label>
+                                            <label for="comment">Task Description</label>
                                             <textarea class="form-control" id="comment" name="comment" rows="4">
                                                 <?php echo $comment; ?>
                                             </textarea>
@@ -88,9 +84,9 @@ if(!empty($taskInfo))
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="status">Durum</label>
+                                                    <label for="status">Status</label>
                                                     <select class="form-control required" id="status" name="status">
-                                                        <option value="0">Durum seçiniz</option>
+                                                        <option value="0">Select status</option>
                                                         <?php
                                             if(!empty($tasks_situations))
                                             {
@@ -112,8 +108,8 @@ if(!empty($taskInfo))
                                             <!-- /.box-body -->
 
                                             <div class="box-footer">
-                                                <input type="submit" class="btn btn-primary" value="Gönder" />
-                                                <input type="reset" class="btn btn-default" value="Sıfırla" />
+                                                <input type="submit" class="btn btn-primary" value="Send" />
+                                                <input type="reset" class="btn btn-default" value="Reset" />
                                             </div>
                                         </div>
                                     </div>
