@@ -2,8 +2,8 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      <i class="fa fa-users"></i> Tüm Görevler
-      <small>Panelimizdeki Tüm Görevler</small>
+      <i class="fa fa-users"></i> All Tasks
+      <small>All Tasks in Our Panel</small>
     </h1>
   </section>
   <section class="content">
@@ -41,15 +41,15 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Görev Başlığı</th>
-                    <th>Açıklama</th>
-                    <th>Durumu</th>
-                    <th>Öncelik</th>
-                    <th>Oluşturan Kullanıcı</th>
-                    <th>Oluşturan Kullanıcı Yetki</th>
-                    <th>Oluşturulma Tarihi</th>
-                    <th>Bitiş Tarihi</th>
-                    <th>Görev Bitir</th>
+                    <th>Task Title</th>
+                    <th>Explanation</th>
+                    <th>Condition</th>
+                    <th>Priority</th>
+                    <th>Creator User</th>
+                    <th>Creator User Authorization</th>
+                    <th>Creation Date</th>
+                    <th>End Date</th>
+                    <th>Finish Task</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -105,7 +105,7 @@
                         <?php echo $record->endDtm ?>
                       </td>
                       <td class="text-center">
-                        <a class="btn btn-sm btn-primary" href="<?= base_url().'endTask/'.$record->id; ?>" title="Görevi Bitir">
+                        <a class="btn btn-sm btn-primary" href="<?= base_url().'endTask/'.$record->id; ?>" title="Finish Mission">
                           <i class="fa fa-check-circle"></i>
                         </a>
                       </td>
