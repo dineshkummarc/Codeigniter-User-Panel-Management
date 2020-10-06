@@ -5,6 +5,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = "login";
 $route['404_override'] = 'login/error';
 
+/*********** CUSTOM DEFINED ROUTES *******************/
+$route['profile'] = "user/profile";
+$route['profile/(:any)'] = "user/profile/$1";
+$route['profileUpdate'] = "user/profileUpdate";
+$route['profileUpdate/(:any)'] = "user/profileUpdate/$1";
 
 /*********** USER DEFINED ROUTES *******************/
 
