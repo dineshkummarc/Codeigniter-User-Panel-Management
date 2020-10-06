@@ -83,7 +83,7 @@ class BaseController extends CI_Controller {
 	 */
 	public function accesslogincontrol()
     {
-            $process = 'Erişim Reddi';
+            $process = 'Access Denial';
             $processFunction = 'Admin/accesslogincontrol';
             $this->logrecord($process,$processFunction);
 
@@ -95,7 +95,7 @@ class BaseController extends CI_Controller {
 	 */
 	function logout() {
 
-		$process = 'Çıkış';
+		$process = 'Exit';
         $processFunction = 'BaseController/logout';
         $this->logrecord($process,$processFunction);
 
