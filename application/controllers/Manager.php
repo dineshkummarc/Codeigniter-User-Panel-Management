@@ -42,7 +42,7 @@ class Manager extends BaseController
     {
             $data['taskRecords'] = $this->user_model->getTasks();
 
-            $process = 'Tüm görevler';
+            $process = 'All missions';
             $processFunction = 'Manager/tasks';
             $this->logrecord($process,$processFunction);
 
