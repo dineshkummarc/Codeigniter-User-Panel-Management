@@ -445,7 +445,7 @@ class Admin extends BaseController
             }
             else
             {
-                $this->session->set_flashdata('success', 'Backup installation is successful');
+                $this->session->set_flashdata('success', 'Backup installation is successful Completed');
                 redirect('log-history-upload');
             }
     }
