@@ -96,7 +96,7 @@
                 <li class="user-footer">
                   <div class="pull-left">
                     <a href="<?php echo base_url(); ?>userEdit" class="btn btn-default btn-flat">
-                      <i class="fa fa-key"></i> Account settings </a>
+                      <i class="fa fa-key"></i> Settings </a>
                   </div>
 				  <div class="pull-left">
                     <a href="<?php echo base_url(); ?>profile" class="btn btn-default btn-flat">
