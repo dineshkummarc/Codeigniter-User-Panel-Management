@@ -2,8 +2,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            <i class="fa fa-users"></i> Yedek Log Yükle
-            <small>Yedek Log Yükleme İşlemi</small>
+            <i class="fa fa-users"></i> Upload Backup Log
+            <small>Backup Log Upload Process</small>
         </h1>
     </section>
     <section class="content">
@@ -11,7 +11,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title">Yedek yükleme işlemi için sql veya gz.sql dosyasınızı seçiniz</h3>
+                        <h3 class="box-title">Select your sql or gz.sql file for backup installation.</h3>
                         <div class="box-tools">
                         </div>
                     </div>
@@ -45,9 +45,9 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="role">Log Tablosu Yedekleri</label>
+                                                    <label for="role">Log Table Backups</label>
                                                     <select class="form-control" id="optionfilebackup" name="optionfilebackup">
-                                                        <option value="0">Yedek Seçiniz</option>
+                                                        <option value="0">Select Reserve</option>
                                                         <?php
                                             if(!empty($backups))
                                             {
@@ -66,10 +66,9 @@
                                             ?>
                                                     </select>
                                                     <div class="form-group">
-                                                        <label for="filebackup">Dosya seç</label>
+                                                        <label for="filebackup">Select file</label>
                                                         <input type="file" id="filebackup" name="filebackup">
-                                                        <p class="help-block">Yedek yükleme için sunucudan veya dosya seç üzerinden yedek seçmeniz
-                                                            gerekir.</p>
+                                                        <p class="help-block">For backup installation, you must select backup from server or select file.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,8 +77,8 @@
                                     <!-- /.box-body -->
 
                                     <div class="box-footer">
-                                        <input type="submit" class="btn btn-primary" value="Yükle" />
-                                        <input type="reset" class="btn btn-default" value="Sıfırla" />
+                                        <input type="submit" class="btn btn-primary" value="Load" />
+                                        <input type="reset" class="btn btn-default" value="Reset" />
                                     </div>
                                 </form>
 
