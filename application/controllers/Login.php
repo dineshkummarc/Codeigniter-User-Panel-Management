@@ -40,7 +40,7 @@ class Login extends BaseController
         }
         else
         {
-            $process = 'Hata';
+            $process = 'Error';
             $processFunction = 'Login/error';
             $this->logrecord($process,$processFunction);
             redirect('pageNotFound');
@@ -52,7 +52,7 @@ class Login extends BaseController
      */
     public function noaccess() {
         
-        $this->global['pageTitle'] = 'BSEU : Erişim Reddedildi';
+        $this->global['pageTitle'] = 'BSEU : Access Denied';
         $this->datas();
 
         $this->load->view ( 'includes/header', $this->global );
@@ -105,7 +105,7 @@ class Login extends BaseController
                 {
                     $lastLogin = $this->login_model->lastLoginInfo($res->userId);
                     
-                    $process = 'Giriş';
+                    $process = 'Login';
                     $processFunction = 'Login/loginMe';
 
                     $sessionArray = array('userId'=>$res->userId,                    
@@ -197,7 +197,7 @@ class Login extends BaseController
 
                     $sendStatus = resetPasswordEmail($data1);
 
-                    $process = 'Password Reset İsteği';
+                    $process = 'Password Reset Request';
                     $processFunction = 'Login/resetPasswordUser';
                     $this->logrecord($process,$processFunction);
 
