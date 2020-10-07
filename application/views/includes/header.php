@@ -153,7 +153,7 @@
 			<li class="treeview">
               <a href="<?php echo base_url(); ?>uploadtask">
                 <i class="fa fa-upload"></i>
-                <span>Upload Task</span>
+                <span>Import Task</span>
               </a>
             </li>
               <li class="treeview">
