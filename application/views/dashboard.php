@@ -31,7 +31,9 @@
               <!-- small box -->
               <div class="small-box bg-blue">
                 <div class="inner">
-                  <h3>65</h3>
+                  <h3>
+				  <?php if(isset($tasksCount)) { echo $tasksCount-$finishedTasksCount; } else { echo '0%'; } ?>
+				  </h3>
                   <p>Open tasks</p>
                 </div>
                 <div class="icon">
@@ -65,14 +67,7 @@
         <div class="small-box bg-green">
           <div class="inner">
             <h3>
-			<?php if(isset($tasksCount))
-			{ echo $finishedTasksCount/$tasksCount*100|0;echo '%';
-			}
-			else
-			{ 
-			echo '0%';
-			} ?>
-              <!-- <?php if(isset($finishedTasksCount)) { echo $finishedTasksCount; } else { echo '0'; } ?>% -->
+			<?php if(isset($tasksCount)) { echo $finishedTasksCount/$tasksCount*100|0;echo '%'; } else { echo '0%'; } ?>
             </h3>
             <p>Completed Tasks</p>
           </div>
