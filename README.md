@@ -1,4 +1,4 @@
-## Codeigniter User Panel Management / BSEU
+## phpmyTaskManagement
 
 TESTED ON => XAMPP v3.2.4 (Web Server with Apache/2.4.41, PHP/7.1.33, MySQL/mysqlnd 5.0.12-dev)
 
